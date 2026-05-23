@@ -84,6 +84,12 @@ async function getRangeFromQueryWithTZ(query) {
   if (preset === 'custom' && query.from && query.to) {
     rangeStart = startOfDayVN(new Date(query.from), dayStartHour);
     rangeEnd = endOfDayVN(new Date(query.to), dayStartHour);
+  } else if (preset === 'yesterday') {
+    const localNow = toLocalVN(now);
+    const yesterday = new Date(localNow);
+    yesterday.setDate(yesterday.getDate() - 1);
+    rangeStart = startOfDayVN(yesterday, dayStartHour);
+    rangeEnd = endOfDayVN(yesterday, dayStartHour);
   } else if (preset === 'week') {
     const localNow = toLocalVN(now);
     const day = localNow.getDay();

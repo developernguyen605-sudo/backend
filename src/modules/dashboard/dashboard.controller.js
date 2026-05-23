@@ -20,6 +20,11 @@ function getComparisonRange(preset, rangeStart, rangeEnd) {
     y.setDate(y.getDate() - 1);
     return { prevRangeStart: startOfDay(y), prevRangeEnd: endOfDay(y) };
   }
+  if (preset === 'yesterday') {
+    const y = new Date(rangeStart);
+    y.setDate(y.getDate() - 1);
+    return { prevRangeStart: startOfDay(y), prevRangeEnd: endOfDay(y) };
+  }
   if (preset === 'week') {
     const prevWeekEnd = new Date(rangeStart);
     prevWeekEnd.setDate(prevWeekEnd.getDate() - 1);
