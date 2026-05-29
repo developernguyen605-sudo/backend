@@ -1,4 +1,4 @@
-require('dotenv').config();
+0require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const http = require('http');
@@ -16,6 +16,7 @@ const defaultAllowedOrigins = [
   'https://localhost',
   'capacitor://localhost',
   'ionic://localhost',
+  'https://frontend-one-indol-52.vercel.app',
   // Mobile app schemes
   'bida-mobile://',
   'app.openbida://',
