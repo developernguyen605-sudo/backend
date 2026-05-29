@@ -16,7 +16,7 @@ const defaultAllowedOrigins = [
   'https://localhost',
   'capacitor://localhost',
   'ionic://localhost',
-  'https://frontend-one-indol-52.vercel.app',
+  'https://frontend-git-master-hoiquan38.vercel.app',
   // Mobile app schemes
   'bida-mobile://',
   'app.openbida://',
